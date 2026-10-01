@@ -22,7 +22,7 @@ The system implements the following data path:
              │ 8-bit data
              ▼
     ┌─────────────────┐
-    │ Memory Controller│
+    │ Memory Controller
     └────────┬────────┘
              │
              ▼
@@ -32,7 +32,7 @@ The system implements the following data path:
               │
               ▼
     ┌─────────────────┐
-    │ Memory Controller│
+    │ Memory Controller
     └────────┬────────┘
              │
              ▼
@@ -167,27 +167,6 @@ Stop bit = 1
 ```
 
 Because UART is asynchronous, the transmitter and receiver do not share a clock. Both sides must therefore use the same configured baud rate.
-
----
-
-## RTL Architecture
-
-The current RTL hierarchy is:
-
-```text
-rtl/
-├── loopback_top.v
-├── ClockDivider.v
-├── uart_rx.v
-├── uart_tx.v
-├── meta_harden.v
-├── uart_baud_gen.v
-├── uart_rx_ctl.v
-├── posedge_detector.v
-├── memory_control.v
-└── ip/
-    └── blk_mem_gen_0.xci
-```
 
 ---
 
